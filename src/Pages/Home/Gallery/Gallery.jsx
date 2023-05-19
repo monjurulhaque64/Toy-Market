@@ -15,7 +15,7 @@ const images = [
 const Gallery = () => {
     return (
         <div className='mb-10 mt-10 rounded-3xl'>
-            <h1 className='text-center mb-10 text-4xl text-purple-500 font-bold'>Introducing our Adorable Little Stars: Meet Our Charming Baby Customers!</h1>
+            <h1 className='text-center mb-10 text-4xl text-purple-400 font-bold'>Introducing our Adorable Little Stars: Meet Our Charming Baby Customers!</h1>
             <ResponsiveMasonry
             columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}
         >
