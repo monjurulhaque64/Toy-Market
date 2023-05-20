@@ -37,7 +37,7 @@ const Login = () => {
                                     <button className="btn btn-outline btn-accent ">Sing in</button>
                                 </div>
                                 <label className="label">
-                                    <p className="label-text-alt link link-hover">New to Toy House? <Link className='text-emerald-400 font-bold'>Sing Up</Link></p>
+                                    <p className="label-text-alt link link-hover">New to Toy House? <Link to={'/singup'} className='text-emerald-400 font-bold'>Sing Up</Link></p>
                                 </label>
 
 
