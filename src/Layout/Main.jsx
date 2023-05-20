@@ -4,7 +4,7 @@ import Home from '../Pages/Home/Home/Home';
 
 const Main = () => {
     return (
-        <div>
+        <div className='container mx-auto'>
             <Outlet></Outlet>
             
         </div>
