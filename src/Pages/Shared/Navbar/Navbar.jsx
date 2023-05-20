@@ -1,8 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../../assets/logo/logo.png'
+import { AuthContext } from '../../../Provider/AuthProvider';
 
 const Navbar = () => {
+
+    const {user, logOut} = useContext(AuthContext);
+    console.log(user)
+    const handleLogOut = () =>{
+        logOut()
+        .then()
+        .catch(error => console.log(error))
+    }
 
 
     const toyNavItems = <>
@@ -35,14 +44,20 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <div className="avatar">
-                        <div className="w-12 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                            <img src="https://cdn3.iconfinder.com/data/icons/avatars-flat/33/man_5-512.png" />
+                { user ? <div className="avatar">
+                        <div className="w-12 rounded-full">
+                            <img src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg" />
                         </div>
+                        <a onClick={handleLogOut}  className="btn ms-4 btn-outline">Log Out</a>
+                    </div> :
+                    <div>
+                        <Link to={'/singup'}><a className="btn sing-up  ms-4 btn-outline">SIGN UP</a></Link>
+                        <Link to={'/login'}><a className="btn ms-4">SIGN IN</a></Link>
+                    </div>}
                     </div>
                 </div>
             </div>
-        </div>
+        
     );
 };
 

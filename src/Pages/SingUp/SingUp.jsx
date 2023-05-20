@@ -1,9 +1,38 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import Footer from '../Shared/Footer/Footer';
 import { Link } from 'react-router-dom';
 import Navbar from '../Shared/Navbar/Navbar';
+import { AuthContext } from '../../Provider/AuthProvider';
 
 const SingUp = () => {
+
+    const {createUser} = useContext(AuthContext);
+    const [error, setError] = useState();
+
+    const handleSingUp = event => {
+        event.preventDefault();
+        const form =  event.target;
+        const name = form.name.value;
+        const email = form.email.value;
+        const photoURL = form.photo.value;
+        const password = form.password.value;
+
+        console.log(name, email, photoURL, password)
+        setError('');
+
+        createUser(email, password)
+        .then(result => {
+            const logedUser = result.user;
+            console.log(logedUser)
+            form.reset();
+        })
+        .catch(error =>{
+            console.log(error);
+            setError(error.message)
+
+        })
+
+    }
     return (
         <div>
              <div>
@@ -13,12 +42,12 @@ const SingUp = () => {
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                         <div className="card-body">
                             <h1 className="text-5xl font-bold text-center text-emerald-400">Sing Up</h1>
-                            <form>
+                            <form onSubmit={handleSingUp}>
                                 <div className="form-control">
                                     <label className="label">
                                         <span className="label-text">Name</span>
                                     </label>
-                                    <input type="text" placeholder="Name" className="input input-bordered" required name='Name' />
+                                    <input type="text" placeholder="Name" className="input input-bordered" required name='name' />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
@@ -47,6 +76,7 @@ const SingUp = () => {
 
 
                             </form>
+                            <p className='text-warning text-center'>{error}</p>
                         </div>
                     </div>
                 </div>
