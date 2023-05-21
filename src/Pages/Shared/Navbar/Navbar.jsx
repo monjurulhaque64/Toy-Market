@@ -5,20 +5,20 @@ import { AuthContext } from '../../../Provider/AuthProvider';
 
 const Navbar = () => {
 
-    const {user, logOut} = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext);
     console.log(user)
-    const handleLogOut = () =>{
+    const handleLogOut = () => {
         logOut()
-        .then()
-        .catch(error => console.log(error))
+            .then()
+            .catch(error => console.log(error))
     }
 
 
     const toyNavItems = <>
-        <li>Home</li>
+        <Link to={'/'}><li>Home</li></Link>
         <li>All Toys</li>
         <li>My Toys</li>
-        <li>Add A Toy</li>
+        <Link to={'/addtoy'}><li>Add A Toy</li></Link>
         <li>Blogs</li>
 
     </>
@@ -44,20 +44,20 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                { user ? <div className="avatar"  >
+                    {user ? <div className="avatar"  >
                         <div className="w-12 rounded-full tooltip" data-tip={user.displayName} >
                             <a><img src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg" /></a>
                         </div>
-                        <a onClick={handleLogOut}  className="btn ms-4 btn-outline">Log Out</a>
+                        <a onClick={handleLogOut} className="btn ms-4 btn-outline">Log Out</a>
                     </div> :
-                    <div>
-                        <Link to={'/singup'}><a className="btn sing-up  ms-4 btn-outline">SIGN UP</a></Link>
-                        <Link to={'/login'}><a className="btn ms-4">SIGN IN</a></Link>
-                    </div>}
-                    </div>
+                        <div>
+                            <Link to={'/singup'}><a className="btn sing-up  ms-4 btn-outline">SIGN UP</a></Link>
+                            <Link to={'/login'}><a className="btn ms-4">SIGN IN</a></Link>
+                        </div>}
                 </div>
             </div>
-        
+        </div>
+
     );
 };
 

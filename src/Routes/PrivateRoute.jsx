@@ -4,7 +4,7 @@ import { Navigate, useLocation } from 'react-router-dom';
 import LoadingSpin from "react-loading-spin";
 
 const PrivateRoute = ({ children }) => {
-    const { user } = useContext(AuthContext);
+    const { user, loading } = useContext(AuthContext);
     const location = useLocation();
     if (loading) {
         return <div>
