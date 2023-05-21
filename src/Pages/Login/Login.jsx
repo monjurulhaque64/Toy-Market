@@ -2,8 +2,7 @@ import React, { useContext, useState } from 'react';
 import { FaGoogle } from "react-icons/fa";
 import img from '../../assets/login/Cute-Aesthetic-Wallpaper-removebg-preview.png'
 import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
-import Navbar from '../Shared/Navbar/Navbar';
-import Footer from '../Shared/Footer/Footer';
+
 import { AuthContext } from '../../Provider/AuthProvider';
 import { GoogleAuthProvider } from 'firebase/auth';
 
@@ -51,7 +50,7 @@ const Login = () => {
     }
     return (
         <div>
-            <Navbar></Navbar>
+            
             <div className="hero min-h-screen bg-base-200" style={{ backgroundImage: "url(https://img.freepik.com/premium-vector/illustration-baby-background-design-3d-graphic-style-blue-background_62298-681.jpg)" }}>
                 <div className="hero-content flex-col lg:flex-row">
                     <div className="text-center lg:text-left">
@@ -94,7 +93,7 @@ const Login = () => {
                     </div>
                 </div>
             </div>
-            <Footer></Footer>
+            
         </div>
 
     );

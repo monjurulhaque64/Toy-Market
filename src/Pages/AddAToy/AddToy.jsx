@@ -48,7 +48,7 @@ const AddToy = () => {
     }
     return (
         <div>
-            <Navbar></Navbar>
+
             <div className="hero min-h-screen bg-base-200 mt-10 mb-10" style={{ backgroundImage: "url(https://thumbs.dreamstime.com/b/table-top-view-decoration-kid-toys-develop-background-concept-table-top-view-decoration-kid-toys-develop-background-158022023.jpg)" }}>
                 <form onSubmit={handleAddToy}>
                     <div className="hero-content " >
@@ -164,7 +164,6 @@ const AddToy = () => {
                     </div>
                 </form>
             </div>
-            <Footer></Footer>
         </div>
     );
 };

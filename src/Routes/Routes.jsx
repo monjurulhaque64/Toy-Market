@@ -24,15 +24,20 @@ const router = createBrowserRouter([
           path:'/singup',
           element: <SingUp></SingUp>
         },
-        {
-          path: '*',
-          element: <PageNotFound></PageNotFound>
-        },
+        
         {
           path: '/addtoy',
           element: <PrivateRoute><AddToy></AddToy></PrivateRoute>
+        },
+        {
+          path: '/alltoy',
+          element: <AddToy></AddToy>
         }
       ]
+    },
+    {
+      path: '*',
+      element: <PageNotFound></PageNotFound>
     },
   ]);
 

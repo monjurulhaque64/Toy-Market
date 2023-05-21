@@ -1,7 +1,4 @@
 import React, { useContext, useState } from 'react';
-import Footer from '../Shared/Footer/Footer';
-
-import Navbar from '../Shared/Navbar/Navbar';
 import { AuthContext } from '../../Provider/AuthProvider';
 
 const SingUp = () => {
@@ -38,7 +35,7 @@ const SingUp = () => {
     return (
         <div>
              <div>
-            <Navbar></Navbar>
+
             <div className="hero min-h-screen bg-base-200" style={{ backgroundImage: "url(https://e1.pxfuel.com/desktop-wallpaper/392/123/desktop-wallpaper-cute-toys-kawaii-bear-laptop.jpg)" }}>
                 <div className="hero-content flex-col lg:flex-row">
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
@@ -83,7 +80,7 @@ const SingUp = () => {
                     </div>
                 </div>
             </div>
-            <Footer></Footer>
+
         </div>
         </div>
     );
