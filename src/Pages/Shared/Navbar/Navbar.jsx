@@ -51,9 +51,13 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-end">
                     {user ? <div className="avatar"  >
-                        <div className="w-12 rounded-full tooltip" data-tip={user.displayName} >
-                            <a><img src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg" /></a>
-                        </div>
+                        {user.photoURL ? <div className="w-12 rounded-full ">
+                            <a><img src={user?.photoURL} /></a>
+                        </div> :
+                            <div className="w-12 rounded-full">
+                                <a><img src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg" /></a>
+                            </div>
+                        }
                         <a onClick={handleLogOut} className="btn ms-4 btn-outline">Log Out</a>
                     </div> :
                         <div>

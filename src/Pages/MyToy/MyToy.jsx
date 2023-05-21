@@ -21,7 +21,7 @@ const MyToy = () => {
             showCancelButton: true,
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
-            confirmButtonText: 'Yes, delete it!'
+            confirmButtonText: 'Yes, delete this Toy!'
         }).then((result) => {
             if (result.isConfirmed) {
                 fetch(`http://localhost:5000/toys/${id}`, {

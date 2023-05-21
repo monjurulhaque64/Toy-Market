@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
+import { Link } from 'react-router-dom';
 
 const SingUp = () => {
 
@@ -10,15 +11,15 @@ const SingUp = () => {
     const handleSingUp = event => {
         event.preventDefault();
         const form =  event.target;
-        const name = form.name.value;
+        const displayName = form.name.value;
         const email = form.email.value;
         const photoURL = form.photo.value;
         const password = form.password.value;
 
-        console.log(name, email, photoURL, password)
+        console.log(displayName, email, photoURL, password)
         setError('');
 
-        createUser(email, password)
+        createUser(email, password, photoURL, displayName)
         .then(result => {
             const logedUser = result.user;
             console.log(logedUser)

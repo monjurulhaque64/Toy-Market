@@ -26,10 +26,10 @@ const MyToyRow = ({myToy, handleDelete}) => {
             <td className='text-center'>$ {price}</td>
             <td className='text-center'>{quantity}</td>
             <th>
-                <Link to={myToy} ><button className="btn btn-outline btn-info">Update</button></Link>
+                <Link to={`/update/${_id}`} ><button className="btn btn-outline btn-info">Update</button></Link>
             </th>
             <th>
-                <Link to={myToy} ><button onClick={() => handleDelete(_id)} className="btn btn-outline btn-warning">Delete</button></Link>
+                <Link><button onClick={() => handleDelete(_id)} className="btn btn-outline btn-warning">Delete</button></Link>
             </th>
         </tr>
     );
