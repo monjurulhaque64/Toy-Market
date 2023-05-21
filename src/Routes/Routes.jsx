@@ -4,6 +4,7 @@ import Home from "../Pages/Home/Home/Home";
 import Login from "../Pages/Login/Login";
 import SingUp from "../Pages/SingUp/SingUp";
 import PageNotFound from "../Pages/PageNotFound/PageNotFound";
+import AddToy from "../Pages/AddAToy/AddToy";
 
 const router = createBrowserRouter([
     {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
         {
           path: '*',
           element: <PageNotFound></PageNotFound>
+        },
+        {
+          path: '/addtoy',
+          element: <AddToy></AddToy>
         }
       ]
     },
