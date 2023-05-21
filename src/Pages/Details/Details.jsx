@@ -18,6 +18,7 @@ const Details = () => {
             <p className="py-3 text-xl"> Saller Name: <span className='font-bold'>{subCategory}</span></p>
             <p className="py-3 text-xl"> Price: <span className='font-bold'>$ {price}</span></p>
             <p className="py-3 text-xl"> Available Quantity: <span className='font-bold'>{quantity}</span></p>
+            <p className="py-3 text-xl"> Rating: <span className='font-bold'>{rating}</span></p>
             <p className="py-3 text-xl"> <span className='font-bold'>Details:</span> {description}</p>
             
            

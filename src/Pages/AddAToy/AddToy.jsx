@@ -1,9 +1,11 @@
-import React from 'react';
-import Navbar from '../Shared/Navbar/Navbar';
-import Footer from '../Shared/Footer/Footer';
+import React, { useContext } from 'react';
+
 import Swal from 'sweetalert2'
+import { AuthContext } from '../../Provider/AuthProvider';
 
 const AddToy = () => {
+    const { user } = useContext(AuthContext);
+    console.log(user.email)
 
     const handleAddToy = event =>{
         event.preventDefault();
@@ -83,7 +85,7 @@ const AddToy = () => {
                                         type="text"
                                         placeholder="Enter Seller Name"
                                         className="input input-bordered"
-                                        name='sallerName' required
+                                        name='sallerName' required defaultValue={user?.displayName}
                                     />
                                 </div>
                                 <div className="form-control">
@@ -95,7 +97,7 @@ const AddToy = () => {
                                         placeholder="Enter Seller Email"
                                         className="input input-bordered"
                                         name='sellerEmail'
-                                        required
+                                        required defaultValue={user.email} readOnly
                                     />
                                 </div>
                                 <div className="form-control">

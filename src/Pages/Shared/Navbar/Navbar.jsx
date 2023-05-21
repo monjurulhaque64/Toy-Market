@@ -14,14 +14,20 @@ const Navbar = () => {
     }
 
 
-    const toyNavItems = <>
-        <Link to={'/'}><li>Home</li></Link>
-        <Link to={'alltoy'}><li>All Toys</li></Link>
-        <li>My Toys</li>
-        <Link to={'/addtoy'}><li>Add A Toy</li></Link>
-        <li>Blogs</li>
-
-    </>
+    const toyNavItems = (
+        <>
+          <Link to={'/'}><li>Home</li></Link>
+          <Link to={'alltoy'}><li>All Toys</li></Link>
+          {user && (
+            <>
+              <li>My Toys</li>
+              <Link to={'/addtoy'}><li>Add A Toy</li></Link>
+            </>
+          )}
+          <li>Blogs</li>
+        </>
+      );
+      
     return (
         <div>
             <div className="navbar bg-base-100 h-28 mb-6 mt-6">
