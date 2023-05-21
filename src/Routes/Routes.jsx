@@ -6,6 +6,7 @@ import SingUp from "../Pages/SingUp/SingUp";
 import PageNotFound from "../Pages/PageNotFound/PageNotFound";
 import AddToy from "../Pages/AddAToy/AddToy";
 import PrivateRoute from "./PrivateRoute";
+import AllToy from "../Pages/AllToy/AllToy";
 
 const router = createBrowserRouter([
     {
@@ -31,7 +32,8 @@ const router = createBrowserRouter([
         },
         {
           path: '/alltoy',
-          element: <AddToy></AddToy>
+          element: <AllToy></AllToy>,
+          loader: () => fetch('http://localhost:5000/toys')
         }
       ]
     },
