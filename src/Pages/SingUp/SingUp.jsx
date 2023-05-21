@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import Footer from '../Shared/Footer/Footer';
-import { Link } from 'react-router-dom';
+
 import Navbar from '../Shared/Navbar/Navbar';
 import { AuthContext } from '../../Provider/AuthProvider';
 
@@ -8,6 +8,7 @@ const SingUp = () => {
 
     const {createUser} = useContext(AuthContext);
     const [error, setError] = useState();
+    
 
     const handleSingUp = event => {
         event.preventDefault();
@@ -24,6 +25,7 @@ const SingUp = () => {
         .then(result => {
             const logedUser = result.user;
             console.log(logedUser)
+            
             form.reset();
         })
         .catch(error =>{

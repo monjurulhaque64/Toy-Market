@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAlCIvlpz3Xpm6wxgYy4WHxlEfvq4loNX0",
-  authDomain: "toy-house-756b7.firebaseapp.com",
-  projectId: "toy-house-756b7",
-  storageBucket: "toy-house-756b7.appspot.com",
-  messagingSenderId: "872311133055",
-  appId: "1:872311133055:web:46039b7bb0ecd40d77c04a"
+  apiKey: import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_authDomain,
+  projectId: import.meta.env.VITE_projectId,
+  storageBucket: import.meta.env.VITE_storageBucket,
+  messagingSenderId: import.meta.env.VITE_messagingSenderId,
+  appId: import.meta.env.VITE_appId
 };
 
 // Initialize Firebase
