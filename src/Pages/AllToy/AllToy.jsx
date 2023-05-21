@@ -20,12 +20,15 @@ const AllToy = () => {
                             <th>Details</th>
                         </tr>
                     </thead>
-                    {
-                        toys.map(toy => <AllToyROw
-                        key={toy._id}
-                        toy={toy}
-                        ></AllToyROw>)
-                    }
+                    <tbody>
+                        {
+                            toys.map(toy => <AllToyROw
+                                key={toy._id}
+                                toy={toy}
+                            ></AllToyROw>)
+                        }
+                    </tbody>
+
                 </table>
             </div>
         </div>

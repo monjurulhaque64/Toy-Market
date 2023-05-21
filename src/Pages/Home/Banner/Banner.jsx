@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Banner = () => {
     return (
@@ -8,9 +9,9 @@ const Banner = () => {
                     <h1 className="text-2xl lg:text-4xl text-purple-400  font-bold mb-4">"Playful Wonders: Discover Joyful Delights at Our Baby Toy House!</h1>
                     <p className="text-base md:text-lg text-gray-500 lg:text-xl mb-6">Toys that Spark Smiles. Delight your little ones with our charming collection of baby toys.</p>
                     <div className="flex space-x-4">
-                        <button className="btn btn-outline btn-info ">
+                        <Link to={'/alltoy'}><button className="btn btn-outline btn-info ">
                             View Collections
-                        </button>
+                        </button></Link>
                         
                     </div>
                 </div>
