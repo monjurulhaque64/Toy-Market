@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '../Shared/Navbar/Navbar';
 import Footer from '../Shared/Footer/Footer';
+import Swal from 'sweetalert2'
 
 const AddToy = () => {
 
@@ -17,8 +18,32 @@ const AddToy = () => {
         const quantity = form.quantity.value;
         const description = form.description.value;
 
-        console.log(toyName, toyPhoto, sallerName, sellerEmail, subCategory, price, rating, quantity, description)
 
+
+        const addToy = {
+            toyName, toyPhoto, sallerName, sellerEmail, subCategory, price, rating, quantity, description
+        }
+        console.log(addToy)
+
+        fetch('http://localhost:5000/toys', {
+            method: 'POST',
+            headers: {
+                'content-type' : 'application/json'
+            },
+            body: JSON.stringify(addToy)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+            if(data.insertedId){
+                Swal.fire({
+                    title: 'Success!',
+                    text: 'Toy Add Successfully!',
+                    icon: 'success',
+                    confirmButtonText: 'Ok'
+                  })
+            }
+        })
 
     }
     return (
@@ -75,13 +100,13 @@ const AddToy = () => {
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
-                                        <span className="label-text">Sub-category</span>
+                                        <span className="label-text">Category</span>
                                     </label>
                                     <select name="subCategory" className="input input-bordered">
-                                        <option value="" disabled>Select Sub-category</option>
-                                        <option value="Math Toys">Math Toys</option>
-                                        <option value="Language Toys">Language Toys</option>
-                                        <option value="Science Toys">Science Toys</option>
+                                        <option value="" disabled>Select Category</option>
+                                        <option value="Baby Dolls">Baby Dolls</option>
+                                        <option value="Barbie">Barbie</option>
+                                        <option value="American Girl">American Girl</option>
                                     </select>
                                 </div>
                                 <div className="form-control">
