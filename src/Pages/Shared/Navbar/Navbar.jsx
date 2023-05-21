@@ -16,18 +16,18 @@ const Navbar = () => {
 
     const toyNavItems = (
         <>
-          <Link to={'/'}><li>Home</li></Link>
-          <Link to={'alltoy'}><li>All Toys</li></Link>
-          {user && (
-            <>
-              <li>My Toys</li>
-              <Link to={'/addtoy'}><li>Add A Toy</li></Link>
-            </>
-          )}
-          <li>Blogs</li>
+            <li><Link to={'/'}>Home</Link></li>
+            <li><Link to={'alltoy'}>All Toys</Link></li>
+            {user && (
+                <>
+                    <li><Link to={'/mytoy'}>My Toys</Link></li>
+                    <li><Link to={'/addtoy'}>Add A Toy</Link></li>
+                </>
+            )}
+            <li><Link>Blogs</Link></li>
         </>
-      );
-      
+    );
+
     return (
         <div>
             <div className="navbar bg-base-100 h-28 mb-6 mt-6">
