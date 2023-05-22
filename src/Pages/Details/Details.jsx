@@ -10,6 +10,7 @@ import '@smastrom/react-rating/style.css'
 const Details = () => {
     const toy = useLoaderData();
     const { toyPhoto, toyName, sallerName, subCategory, price, rating, quantity, description, sellerEmail } = toy;
+    console.log(toyName)
     return (
         <div className='mt-10 mb-10'>
             <div className="hero min-h-screen bg-base-200">
