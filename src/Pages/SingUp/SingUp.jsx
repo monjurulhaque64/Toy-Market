@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
 import { Link, useNavigate } from 'react-router-dom';
+import img from '../../assets/login/singup.jpg';
 
 const SingUp = () => {
 
@@ -38,7 +39,7 @@ const SingUp = () => {
         <div>
              <div>
 
-            <div className="hero min-h-screen bg-base-200" style={{ backgroundImage: "url(https://e1.pxfuel.com/desktop-wallpaper/392/123/desktop-wallpaper-cute-toys-kawaii-bear-laptop.jpg)" }}>
+            <div className="hero min-h-screen bg-base-200" style={{ backgroundImage: `url(${img})` }}>
                 <div className="hero-content flex-col lg:flex-row">
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                         <div className="card-body">

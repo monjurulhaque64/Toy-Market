@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-
+import img from '../../assets/addtoy/addtoy.jpg';
 import Swal from 'sweetalert2'
 import { AuthContext } from '../../Provider/AuthProvider';
 
@@ -51,7 +51,7 @@ const AddToy = () => {
     return (
         <div>
 
-            <div className="hero min-h-screen bg-base-200 mt-10 mb-10" style={{ backgroundImage: "url(https://thumbs.dreamstime.com/b/table-top-view-decoration-kid-toys-develop-background-concept-table-top-view-decoration-kid-toys-develop-background-158022023.jpg)" }}>
+            <div className="hero min-h-screen bg-base-200 mt-10 mb-10" style={{ backgroundImage: `url(${img})` }}>
                 <form onSubmit={handleAddToy}>
                     <div className="hero-content " >
                         <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100" >
