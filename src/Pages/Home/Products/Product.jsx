@@ -61,7 +61,7 @@ const Product = () => {
         </TabPanel>
 
         <TabPanel>
-          <div>
+          <div className='grid grid-cols-1 lg:gap-0 gap-6 lg:grid-cols-3 mt-10 mx-auto ms-4'>
             {toys
               .filter((toy) => toy.subCategory === 'Barbie')
               .slice(0, displayCount)
@@ -69,7 +69,7 @@ const Product = () => {
                 <ProductCard key={toy._id} toy={toy} />
               ))}
           </div>
-          <div>
+          <div  className=' w-36 mx-auto mt-6'>
             {toys.filter((toy) => toy.subCategory === 'Barbie').length > 3 && !showAll && (
               <button onClick={handleSeeMore}>See More</button>
             )}
@@ -77,7 +77,7 @@ const Product = () => {
         </TabPanel>
 
         <TabPanel>
-          <div>
+          <div className='grid grid-cols-1 lg:gap-0 gap-6 lg:grid-cols-3 mt-10 mx-auto ms-4'>
             {toys
               .filter((toy) => toy.subCategory === 'American Girl')
               .slice(0, displayCount)
@@ -85,7 +85,7 @@ const Product = () => {
                 <ProductCard key={toy._id} toy={toy} />
               ))}
           </div>
-          <div>
+          <div  className=' w-36 mx-auto mt-6'>
             {toys.filter((toy) => toy.subCategory === 'American Girl').length > 3 && !showAll && (
               <button onClick={handleSeeMore}>See More</button>
             )}
