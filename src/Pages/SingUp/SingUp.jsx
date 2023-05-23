@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext  } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
 import { Link, useNavigate } from 'react-router-dom';
 import img from '../../assets/login/singup.jpg';
@@ -6,7 +6,6 @@ import img from '../../assets/login/singup.jpg';
 const SingUp = () => {
 
     const {createUser} = useContext(AuthContext);
-    const [error, setError] = useState();
     const navigate = useNavigate();
     
 
@@ -30,7 +29,6 @@ const SingUp = () => {
         })
         .catch(error =>{
             console.log(error);
-            setError(error.message)
 
         })
 
@@ -78,7 +76,6 @@ const SingUp = () => {
 
 
                             </form>
-                            <p className='text-warning text-center'>{error}</p>
                         </div>
                     </div>
                 </div>

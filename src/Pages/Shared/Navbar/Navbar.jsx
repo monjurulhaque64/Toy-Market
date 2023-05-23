@@ -60,7 +60,7 @@ const Navbar = () => {
                         }
                         <a onClick={handleLogOut} className="btn ms-4 btn-outline">Log Out</a>
                     </div> :
-                        <div>
+                        <div className='gap-1 grid grid-cols-2'>
                             <Link to={'/singup'}><a className="btn sing-up  ms-4 btn-outline">SIGN UP</a></Link>
                             <Link to={'/login'}><a className="btn ms-4">SIGN IN</a></Link>
                         </div>}

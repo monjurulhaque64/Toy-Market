@@ -10,10 +10,10 @@ const Banner = () => {
         style={{ backgroundImage: `url(${bannerImage})` }}
       >
         <div className="flex flex-col justify-center items-center h-full text-white text-center px-4 md:px-8">
-          <h1 className="text-2xl lg:text-4xl text-purple-400 font-bold mb-4">
+          <h1 className="text-2xl lg:text-4xl text-purple-700 font-bold mb-4">
             Playful Wonders: Discover Joyful Delights at Our Baby Toy House!
           </h1>
-          <p className="text-base md:text-lg text-gray-500 lg:text-xl mb-6">
+          <p className="text-base md:text-lg text-gray-700 lg:text-xl mb-6">
             Toys that Spark Smiles. Delight your little ones with our charming collection of baby toys.
           </p>
           <div className="flex space-x-4">

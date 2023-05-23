@@ -44,7 +44,7 @@ const Product = () => {
 
 
         <TabPanel>
-          <div className='grid grid-cols-1 lg:gap-0 gap-6 lg:grid-cols-3 mt-10 mx-auto ms-4'>
+          <div className='grid grid-cols-1 lg:gap-0 gap-6 lg:grid-cols-3 mt-10 lg:mx-auto sm:ml-0 lg:ms-4'>
             {toys
               .filter((toy) => toy.subCategory === 'Baby Dolls')
               .slice(0, displayCount)
@@ -61,7 +61,7 @@ const Product = () => {
         </TabPanel>
 
         <TabPanel>
-          <div className='grid grid-cols-1 lg:gap-0 gap-6 lg:grid-cols-3 mt-10 mx-auto ms-4'>
+          <div className='grid grid-cols-1 lg:gap-0 gap-6 lg:grid-cols-3 mt-10 lg:mx-auto sm:ml-0 lg:ms-4'>
             {toys
               .filter((toy) => toy.subCategory === 'Barbie')
               .slice(0, displayCount)
@@ -77,7 +77,7 @@ const Product = () => {
         </TabPanel>
 
         <TabPanel>
-          <div className='grid grid-cols-1 lg:gap-0 gap-6 lg:grid-cols-3 mt-10 mx-auto ms-4'>
+          <div className='grid grid-cols-1 lg:gap-0 gap-6 lg:grid-cols-3 mt-10 lg:mx-auto sm:ml-0 lg:ms-4'>
             {toys
               .filter((toy) => toy.subCategory === 'American Girl')
               .slice(0, displayCount)
