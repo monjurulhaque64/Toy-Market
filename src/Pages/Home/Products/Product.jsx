@@ -11,7 +11,7 @@ const Product = () => {
   const [showAll, setShowAll] = useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/toys?subCategory=${activeTab}`)
+    fetch(`https://toy-market-server-silk.vercel.app/toys?subCategory=${activeTab}`)
       .then((res) => res.json())
       .then((result) => {
         setToys(result);

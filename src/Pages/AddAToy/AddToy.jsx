@@ -27,7 +27,7 @@ const AddToy = () => {
         }
         console.log(addToy)
 
-        fetch('http://localhost:5000/toys', {
+        fetch('https://toy-market-server-silk.vercel.app/toys', {
             method: 'POST',
             headers: {
                 'content-type' : 'application/json'

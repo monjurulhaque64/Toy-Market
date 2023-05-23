@@ -37,12 +37,12 @@ const router = createBrowserRouter([
         {
           path: '/alltoy',
           element: <AllToy></AllToy>,
-          loader: () => fetch('http://localhost:5000/toys')
+          loader: () => fetch('https://toy-market-server-silk.vercel.app/toys')
         },
         {
           path: '/details/:id',
           element: <PrivateRoute><Details></Details></PrivateRoute>,
-          loader:({params}) => fetch(`http://localhost:5000/toys/${params.id}`)
+          loader:({params}) => fetch(`https://toy-market-server-silk.vercel.app/toys/${params.id}`)
         },
         {
           path: 'mytoy',
@@ -51,7 +51,7 @@ const router = createBrowserRouter([
         {
           path:'/update/:id',
           element: <PrivateRoute><Update></Update></PrivateRoute>,
-          loader:({params}) => fetch(`http://localhost:5000/toys/${params.id}`)
+          loader:({params}) => fetch(`https://toy-market-server-silk.vercel.app/toys/${params.id}`)
         },
         {
           path: '/blog',

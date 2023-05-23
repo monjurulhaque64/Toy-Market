@@ -1,11 +1,12 @@
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const SingUp = () => {
 
     const {createUser} = useContext(AuthContext);
     const [error, setError] = useState();
+    const navigate = useNavigate();
     
 
     const handleSingUp = event => {
@@ -23,7 +24,7 @@ const SingUp = () => {
         .then(result => {
             const logedUser = result.user;
             console.log(logedUser)
-            
+            navigate('/');
             form.reset();
         })
         .catch(error =>{
